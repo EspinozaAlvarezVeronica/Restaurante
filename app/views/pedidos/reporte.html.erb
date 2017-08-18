@@ -1,0 +1,112 @@
+
+ <% platillos1 = @CantidadDePlatillos.first %> 
+              <% platillos2 = @CantidadDePlatillos.last %>
+              <% postres1 = @CantidadDePostres.first %> 
+              <% postres2 = @CantidadDePostres.last %> 
+               <% bebidas1 = @CantidadDeBebidas.first %> 
+              <% bebidas2 = @CantidadDeBebidas.last %> 
+
+
+ <table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Platillos</th>
+      <th>Bebidas</th>
+      <th>Precio</th>
+      <th>Cantidaddeplatillos</th>
+      <th>Cantidaddebebidas</th>
+      <th>Postre</th>
+      <th>Cantidaddepostres</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+    <% @CantidadDePlatillos.each do |pedido| %>
+      <tr>
+        <td><%= pedido.platillos %></td>
+        <td><%= pedido.bebidas %></td>
+        <td><%= pedido.precio %></td>
+        <td><%= pedido.CantidadDePlatillos %></td>
+        <td><%= pedido.CantidadDeBebidas %></td>
+        <td><%= pedido.postre %></td>
+        <td><%= pedido.CantidadDePostres %></td>
+</tr>
+ <% end %> 
+     
+  </tbody>
+</tr>
+ </table>
+
+    <table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Platillos</th>
+      <th>Bebidas</th>
+      <th>Precio</th>
+      <th>Cantidaddeplatillos</th>
+      <th>Cantidaddebebidas</th>
+      <th>Postre</th>
+      <th>Cantidaddepostres</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <% @CantidadDePostres.each do |pedido| %>
+      <tr>
+        <td><%= pedido.platillos %></td>
+        <td><%= pedido.bebidas %></td>
+        <td><%= pedido.precio %></td>
+        <td><%= pedido.CantidadDePlatillos %></td>
+        <td><%= pedido.CantidadDeBebidas %></td>
+        <td><%= pedido.postre %></td>
+        <td><%= pedido.CantidadDePostres %></td>
+        </tr>
+            
+    <% end %>
+  </tbody>
+    </tr>
+     </table>
+
+     <table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Platillos</th>
+      <th>Bebidas</th>
+      <th>Precio</th>
+      <th>Cantidaddeplatillos</th>
+      <th>Cantidaddebebidas</th>
+      <th>Postre</th>
+      <th>Cantidaddepostres</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <% @CantidadDeBebidas.each do |pedido| %>
+      <tr>
+        <td><%= pedido.platillos %></td>
+        <td><%= pedido.bebidas %></td>
+        <td><%= pedido.precio %></td>
+        <td><%= pedido.CantidadDePlatillos %></td>
+        <td><%= pedido.CantidadDeBebidas %></td>
+        <td><%= pedido.postre %></td>
+        <td><%= pedido.CantidadDePostres %></td>
+        </tr>
+             
+                  
+
+              
+    <% end %>      
+      
+  </tbody>
+      
+    </tr>
+     </table>
+               <h3> La bebida mas pedida es:</h3> <h4><%= bebidas1.bebidas %></h4>
+              <h3> La bebida menos pedida es:</h3> <h4><%= bebidas2.bebidas%></h4>
+              <h3> El platillo mas pedido es :</h3> <h4><%= platillos1.platillos %></h4>
+              <h3> El platilo menos pedido es:</h3> <h4><%= platillos2.platillos %></h4> 
+              <h3> El postre  mas caro es:</h3> <h4><%= postres1.postre %></h4>
+              <h3> El postre mas barato es:</h3> <h4><%= postres2.postre %></h4>        
+
+<%= link_to 'New Pedido', new_pedido_path %>

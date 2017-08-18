@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Platillos:</strong>
+  <%= @pedido.platillos %>
+</p>
+
+<p>
+  <strong>Bebidas:</strong>
+  <%= @pedido.bebidas %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @pedido.precio %>
+</p>
+
+<p>
+  <strong>Cantidaddeplatillos:</strong>
+  <%= @pedido.CantidadDePlatillos %>
+</p>
+
+<p>
+  <strong>Cantidaddebebidas:</strong>
+  <%= @pedido.CantidadDeBebidas %>
+</p>
+
+<p>
+  <strong>Postre:</strong>
+  <%= @pedido.postre %>
+</p>
+
+<p>
+  <strong>Cantidaddepostres:</strong>
+  <%= @pedido.CantidadDePostres %>
+</p>
+
+<%= link_to 'Edit', edit_pedido_path(@pedido) %> |
+<%= link_to 'Back', pedidos_path %>

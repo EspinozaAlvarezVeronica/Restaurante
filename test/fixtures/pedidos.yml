@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  platillos: MyString
+  bebidas: MyString
+  precio: 1
+  CantidadDePlatillos: 1
+  CantidadDeBebidas: 1
+  postre: MyString
+  CantidadDePostres: 1
+
+two:
+  platillos: MyString
+  bebidas: MyString
+  precio: 1
+  CantidadDePlatillos: 1
+  CantidadDeBebidas: 1
+  postre: MyString
+  CantidadDePostres: 1

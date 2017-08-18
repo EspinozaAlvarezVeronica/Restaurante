@@ -1,0 +1,52 @@
+<%= form_with(model: pedido, local: true) do |form| %>
+  <% if pedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pedido.errors.count, "error") %> prohibited this pedido from being saved:</h2>
+
+      <ul>
+      <% pedido.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :platillos %>
+    <%= form.text_field :platillos, id: :pedido_platillos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bebidas %>
+    <%= form.text_field :bebidas, id: :pedido_bebidas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.number_field :precio, id: :pedido_precio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CantidadDePlatillos %>
+    <%= form.number_field :CantidadDePlatillos, id: :pedido_CantidadDePlatillos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CantidadDeBebidas %>
+    <%= form.number_field :CantidadDeBebidas, id: :pedido_CantidadDeBebidas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postre %>
+    <%= form.text_field :postre, id: :pedido_postre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CantidadDePostres %>
+    <%= form.number_field :CantidadDePostres, id: :pedido_CantidadDePostres %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
